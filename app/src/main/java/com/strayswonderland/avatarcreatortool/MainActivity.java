@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.navigation_dashboard:
                     changeFragment(item.getItemId());
                     return true;
-                case R.id.navigation_notifications:
+                case R.id.navigation_settings:
                     changeFragment(item.getItemId());
                     return true;
             }
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.navigation_dashboard:
                 newFragment = new AvatarListingFragment();
                 break;
-            case R.id.navigation_notifications:
+            case R.id.navigation_settings:
                 newFragment = new SettingsFragment();
                 break;
         }
