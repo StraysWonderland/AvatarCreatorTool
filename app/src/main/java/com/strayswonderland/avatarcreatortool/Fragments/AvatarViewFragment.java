@@ -15,7 +15,6 @@ public class AvatarViewFragment extends Fragment {
     ImageButton contextMenueButton;
 
     public AvatarViewFragment() {
-        // Required empty public constructor
     }
 
     @Override
