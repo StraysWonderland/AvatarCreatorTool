@@ -20,7 +20,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="2"
+        android:layout_weight="1.5"
         android:orientation="horizontal">
 
         <ScrollView
@@ -33,21 +33,63 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                <!--TODO:  add images for each Button -->
 
-                <Button
+                <ImageButton
+                    android:id="@+id/bt_HeadFeatureSelection"
+                    style="@android:style/Widget.Material.Button.Small"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
 
-                <Button
+                <ImageButton
+                    android:id="@+id/bt_SkinColorFeatureSelection"
+                    style="@android:style/Widget.Material.Button.Small"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
 
-                <Button
+                <ImageButton
+                    android:id="@+id/bt_EyesFeatureSelection"
+                    style="@android:style/Widget.Material.Button.Small"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+
+                <ImageButton
+                    android:id="@+id/bt_EyeColorFeatureSelection"
+                    style="@android:style/Widget.Material.Button.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+
+                <ImageButton
+                    android:id="@+id/bt_HairFeatureSelection"
+                    style="@android:style/Widget.Material.Button.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+
+                <ImageButton
+                    android:id="@+id/bt_HairColorFeatureSelection"
+                    style="@android:style/Widget.Material.Button.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+
+                <ImageButton
+                    android:id="@+id/bt_NoseFeatureSelection"
+                    style="@android:style/Widget.Material.Button.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+
+                <ImageButton
+                    android:id="@+id/bt_MouthFeatureSelection"
+                    style="@android:style/Widget.Material.Button.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
             </LinearLayout>
         </ScrollView>
 
@@ -63,4 +105,13 @@
             android:stretchMode="columnWidth"
             android:verticalSpacing="1dp" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_confirmAvatar"
+        style="@android:style/Widget.Material.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_margin="8dp"
+        android:text="confirm" />
 </LinearLayout>
