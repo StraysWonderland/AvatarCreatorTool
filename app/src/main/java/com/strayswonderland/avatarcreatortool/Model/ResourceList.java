@@ -123,7 +123,7 @@ public class ResourceList {
      * @param _context
      * @return
      */
-    public static LayerDrawable mergeAvatartoDrawable(Avatar mAvatar, Context _context) {
+    public static LayerDrawable mergeAvatarToDrawable(Avatar mAvatar, Context _context) {
         String _head = mAvatar.getHead();
         String _hair = mAvatar.getHair();
         String _eyes = mAvatar.getEyes();
