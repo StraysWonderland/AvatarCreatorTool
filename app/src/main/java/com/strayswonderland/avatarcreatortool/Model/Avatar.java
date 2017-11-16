@@ -6,11 +6,11 @@ public class Avatar {
 
     private String mName;
     private String
-            mHead, mSkinColor,
-            mEyes, mEyeColor,
-            mHair, mHairColor,
-            mNose,
-            mMouth;
+            Head, SkinColor,
+            Eyes, EyeColor,
+            Hair, HairColor,
+            Nose,
+            Mouth;
     private UUID mId;
 
     //region Constructor
@@ -21,6 +21,7 @@ public class Avatar {
     public Avatar(UUID id) {
         mId = id;
     }
+    //endregion
 
     //region GettersAndSetters
     public UUID getmId() {
@@ -35,69 +36,68 @@ public class Avatar {
         this.mName = mName;
     }
 
-    public String getmHead() {
-        return mHead;
+    public String getHead() {
+        return Head;
     }
 
-    public void setmHead(String mHead) {
-        this.mHead = mHead;
+    public void setHead(String head) {
+        this.Head = head;
     }
 
-    public String getmSkinColor() {
-        return mSkinColor;
+    public String getSkinColor() {
+        return SkinColor;
     }
 
-    public void setmSkinColor(String mSkinColor) {
-        this.mSkinColor = mSkinColor;
+    public void setSkinColor(String skinColor) {
+        this.SkinColor = skinColor;
     }
 
-    public String getmEyes() {
-        return mEyes;
+    public String getEyes() {
+        return Eyes;
     }
 
-    public void setmEyes(String mEyes) {
-        this.mEyes = mEyes;
+    public void setEyes(String eyes) {
+        this.Eyes = eyes;
     }
 
-    public String getmEyeColor() {
-        return mEyeColor;
+    public String getEyeColor() {
+        return EyeColor;
     }
 
-    public void setmEyeColor(String mEyeColor) {
-        this.mEyeColor = mEyeColor;
+    public void setEyeColor(String eyeColor) {
+        this.EyeColor = eyeColor;
     }
 
-    public String getmHair() {
-        return mHair;
+    public String getHair() {
+        return Hair;
     }
 
-    public void setmHair(String mHair) {
-        this.mHair = mHair;
+    public void setHair(String hair) {
+        this.Hair = hair;
     }
 
-    public String getmHairColor() {
-        return mHairColor;
+    public String getHairColor() {
+        return HairColor;
     }
 
-    public void setmHairColor(String mHairColor) {
-        this.mHairColor = mHairColor;
+    public void setHairColor(String hairColor) {
+        this.HairColor = hairColor;
     }
 
-    public String getmNose() {
-        return mNose;
+    public String getNose() {
+        return Nose;
     }
 
-    public void setmNose(String mNose) {
-        this.mNose = mNose;
-    }
-    //endregion
-
-    public String getmMouth() {
-        return mMouth;
+    public void setNose(String nose) {
+        this.Nose = nose;
     }
 
-    public void setmMouth(String mMouth) {
-        this.mMouth = mMouth;
+    public String getMouth() {
+        return Mouth;
+    }
+
+    public void setMouth(String mouth) {
+        this.Mouth = mouth;
     }
     //endregion
 }
