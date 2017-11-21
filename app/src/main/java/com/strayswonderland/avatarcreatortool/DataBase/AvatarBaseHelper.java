@@ -21,6 +21,7 @@ public class AvatarBaseHelper extends SQLiteOpenHelper {
                 AvatarDbSchema.AvatarTable.Cols.HEAD + ", " +
                 AvatarDbSchema.AvatarTable.Cols.EYES + ", " +
                 AvatarDbSchema.AvatarTable.Cols.MOUTH + ", " +
+                AvatarDbSchema.AvatarTable.Cols.NOSE + ", " +
                 AvatarDbSchema.AvatarTable.Cols.HAIR + ")"
         );
     }

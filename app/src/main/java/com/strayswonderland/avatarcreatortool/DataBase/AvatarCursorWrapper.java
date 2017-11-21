@@ -18,6 +18,7 @@ public class AvatarCursorWrapper extends CursorWrapper {
         String head = getString(getColumnIndex(AvatarTable.Cols.HEAD));
         String eyes = getString(getColumnIndex(AvatarTable.Cols.EYES));
         String mouth = getString(getColumnIndex(AvatarTable.Cols.MOUTH));
+        String nose = getString(getColumnIndex(AvatarTable.Cols.NOSE));
         String hair = getString(getColumnIndex(AvatarTable.Cols.HAIR));
 
         Avatar avatar = new Avatar(UUID.fromString(uuidString));
@@ -25,6 +26,7 @@ public class AvatarCursorWrapper extends CursorWrapper {
         avatar.setHead(head);
         avatar.setEyes(eyes);
         avatar.setMouth(mouth);
+        avatar.setNose(nose);
         avatar.setHair(hair);
 
         return avatar;

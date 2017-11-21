@@ -1,13 +1,9 @@
 <resources>
-    <string title="app_name">AvatarCreatorTool</string>
-    <string title="title_activity_main">MainActivity</string>
-    <string title="title_home">Home</string>
-    <string title="title_dashboard">Dashboard</string>
-    <string title="title_settings">Settings</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string title="hello_blank_fragment">Hello blank fragment</string>
-    <string title="title_activity_settings_fragment">Settings</string>
-
-    <string title="confirm_avatar">Confirm</string>
+    <string name="app_name">AvatarCreatorTool</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_activity_settings_fragment">Settings</string>
+    <string name="confirm_avatar">Confirm</string>
 </resources>
