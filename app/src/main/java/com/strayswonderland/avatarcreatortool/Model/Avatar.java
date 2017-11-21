@@ -4,7 +4,7 @@ import java.util.UUID;
 
 public class Avatar {
 
-    private String Name;
+    private String Title;
     private String
             Head, SkinColor,
             Eyes, EyeColor,
@@ -28,12 +28,12 @@ public class Avatar {
         return mId;
     }
 
-    public String getName() {
-        return Name;
+    public String getTitle() {
+        return Title;
     }
 
-    public void setName(String name) {
-        this.Name = name;
+    public void setTitle(String title) {
+        this.Title = title;
     }
 
     public String getHead() {
