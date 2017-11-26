@@ -10,6 +10,7 @@ import com.strayswonderland.avatarcreatortool.DataBase.AvatarBaseHelper;
 import com.strayswonderland.avatarcreatortool.DataBase.AvatarCursorWrapper;
 import com.strayswonderland.avatarcreatortool.DataBase.AvatarDbSchema;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -58,19 +59,52 @@ public class AvatarHandler {
                 new String[]{uuidString});
     }
 
-    public Avatar getAvatar(String name) {
-        //TODO
-        return null;
+    public Avatar getAvatar(String title) {
+        AvatarCursorWrapper cursor = queryAvatar(
+                AvatarDbSchema.AvatarTable.Cols.TITLE + " = ?",
+                new String[]{title});
+        try {
+            if (cursor.getCount() == 0) {
+                return null;
+            }
+            cursor.moveToFirst();
+            return cursor.getAvatar();
+        } finally {
+            cursor.close();
+        }
     }
+
 
     public Avatar getAvatar(UUID id) {
-        //TODO
-        return null;
+        AvatarCursorWrapper cursor = queryAvatar(
+                AvatarDbSchema.AvatarTable.Cols.UUID + " = ?",
+                new String[]{id.toString()}
+        );
+        try {
+            if (cursor.getCount() == 0) {
+                return null;
+            }
+            cursor.moveToFirst();
+            return cursor.getAvatar();
+        } finally {
+            cursor.close();
+        }
     }
 
-    public List<Avatar> getListOfAvatars() {
-        //TODO
-        return null;
+
+    public List<Avatar> getAvatars() {
+        List<Avatar> avatars = new ArrayList<>();
+        AvatarCursorWrapper cursor = queryAvatar(null, null);
+        try {
+            cursor.moveToFirst();
+            while (!cursor.isAfterLast()) {
+                avatars.add(cursor.getAvatar());
+                cursor.moveToNext();
+            }
+        } finally {
+            cursor.close();
+        }
+        return avatars;
     }
 
     private static ContentValues getContentValues(Avatar avatar) {
