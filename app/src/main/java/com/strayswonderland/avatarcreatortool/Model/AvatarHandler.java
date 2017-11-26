@@ -34,11 +34,6 @@ public class AvatarHandler {
     public void addOrUpdateAvatar(Avatar _avatar) {
         Avatar mAvatar;
         if ((mAvatar = this.getAvatar(_avatar.getId())) != null) {
-//            mAvatar.setTitle(_avatar.getTitle());
-//            mAvatar.setHead(_avatar.getHead());
-//            mAvatar.setEyes(_avatar.getEyes());
-//            mAvatar.setHair(_avatar.getHair());
-//            mAvatar.setMouth(_avatar.getMouth());
             this.updateAvatar(mAvatar);
         } else {
             this.addAvatar(_avatar);
@@ -74,7 +69,6 @@ public class AvatarHandler {
         }
     }
 
-
     public Avatar getAvatar(UUID id) {
         AvatarCursorWrapper cursor = queryAvatar(
                 AvatarDbSchema.AvatarTable.Cols.UUID + " = ?",
@@ -90,7 +84,6 @@ public class AvatarHandler {
             cursor.close();
         }
     }
-
 
     public List<Avatar> getAvatars() {
         List<Avatar> avatars = new ArrayList<>();
