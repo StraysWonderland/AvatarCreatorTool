@@ -4,8 +4,7 @@ import java.util.UUID;
 
 public class Avatar {
 
-    private String Title;
-    private String
+    private String Title,
             Head, SkinColor,
             Eyes, EyeColor,
             Hair, HairColor,
