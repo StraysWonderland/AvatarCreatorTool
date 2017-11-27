@@ -5,10 +5,11 @@
     android:layout_height="match_parent"
     tools:context="com.strayswonderland.avatarcreatortool.Fragments.AvatarListingFragment">
 
-    <ListView
+    <android.support.v7.widget.RecyclerView
         android:id="@+id/lv_avatars"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></ListView>
+        android:layout_height="wrap_content"
+        />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab_addNewAvatar"

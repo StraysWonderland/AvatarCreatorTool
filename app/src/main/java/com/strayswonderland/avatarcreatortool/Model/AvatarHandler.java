@@ -85,6 +85,27 @@ public class AvatarHandler {
         }
     }
 
+    public List<Avatar> getDummyAvatars(){
+        List<Avatar> dummyList = new ArrayList<>();
+        Avatar avatar = new Avatar();
+        avatar.setTitle("Pisse01");
+        dummyList.add(avatar);
+
+        avatar = new Avatar();
+        avatar.setTitle("Pisse02");
+        dummyList.add(avatar);
+
+        avatar = new Avatar();
+        avatar.setTitle("Pisse03");
+        dummyList.add(avatar);
+
+        avatar = new Avatar();
+        avatar.setTitle("Pisse04");
+        dummyList.add(avatar);
+
+        return dummyList;
+    }
+
     public List<Avatar> getAvatars() {
         List<Avatar> avatars = new ArrayList<>();
         AvatarCursorWrapper cursor = queryAvatar(null, null);
