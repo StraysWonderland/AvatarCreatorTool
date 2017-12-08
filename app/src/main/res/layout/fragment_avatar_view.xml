@@ -4,20 +4,9 @@
     android:layout_height="match_parent"
     tools:context="com.strayswonderland.avatarcreatortool.Fragments.AvatarViewFragment">
 
-    <ImageButton
-        android:id="@+id/ib_contextMenue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_margin="8dp"
-        android:minHeight="50dp"
-        android:minWidth="50dp"
-        android:src="@drawable/ic_notifications_black_24dp" />
-
     <ImageView
         android:id="@+id/iv_avatarView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/ib_contextMenue" />
+        />
 </RelativeLayout>

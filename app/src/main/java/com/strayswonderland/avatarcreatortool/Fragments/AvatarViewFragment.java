@@ -12,7 +12,6 @@ import com.strayswonderland.avatarcreatortool.R;
 
 public class AvatarViewFragment extends Fragment {
     ImageView avatarPreview;
-    ImageButton contextMenueButton;
 
     public AvatarViewFragment() {
     }
@@ -28,7 +27,6 @@ public class AvatarViewFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_avatar_view, container, false);
 
         avatarPreview = (ImageView) view.findViewById(R.id.iv_avatarView);
-        contextMenueButton = (ImageButton) view.findViewById(R.id.ib_contextMenue);
 
         // Inflate the layout for this fragment
         return view;
