@@ -3,7 +3,7 @@ package com.strayswonderland.avatarcreatortool.Fragments;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -52,7 +52,7 @@ public class AvatarListingFragment extends Fragment {
         mRecyclerView = (RecyclerView) view.findViewById(R.id.lv_avatars);
 
         // use a linear layout manager
-        mLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
+        mLayoutManager = new GridLayoutManager(getActivity().getApplicationContext(), 2);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         // TODO: change to actual List of Avatars
@@ -70,10 +70,10 @@ public class AvatarListingFragment extends Fragment {
         private TextView mTitleTextView;
 
         public AvatarHolder(LayoutInflater inflater, ViewGroup parent) {
-            super(inflater.inflate(android.R.layout.simple_list_item_1, parent, false));
+            super(inflater.inflate(R.layout.avatar_list_item, parent, false));
             itemView.setOnClickListener(this);
 
-            mTitleTextView = (TextView) itemView;
+            mTitleTextView = (TextView) itemView.findViewById(R.id.tv_avatar_item_title);
         }
 
         public void bind(Avatar avatar) {

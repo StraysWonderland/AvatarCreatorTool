@@ -6,4 +6,6 @@
     <string name="title_settings">Settings</string>
     <string name="title_activity_settings_fragment">Settings</string>
     <string name="confirm_avatar">Confirm</string>
+    <string name="avatar_list_item_id_default">IdTextView</string>
+    <string name="avatar_list_item_title_default">TitleTextView</string>
 </resources>
