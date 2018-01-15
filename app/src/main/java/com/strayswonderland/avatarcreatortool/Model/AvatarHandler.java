@@ -103,6 +103,10 @@ public class AvatarHandler {
         avatar.setTitle("Pisse04");
         dummyList.add(avatar);
 
+        avatar = new Avatar();
+        avatar.setTitle("Pisse05");
+        dummyList.add(avatar);
+
         return dummyList;
     }
 
