@@ -8,4 +8,5 @@
     <string name="confirm_avatar">Confirm</string>
     <string name="avatar_list_item_id_default">IdTextView</string>
     <string name="avatar_list_item_title_default">TitleTextView</string>
+    <string name="avatar_name_field">Name your Avatar!</string>
 </resources>

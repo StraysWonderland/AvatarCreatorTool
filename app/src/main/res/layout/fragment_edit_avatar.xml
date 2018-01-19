@@ -1,16 +1,22 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/layout_1"
+    android:id="@+id/cl_edit_avatar_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.strayswonderland.avatarcreatortool.Fragments.EditAvatarFragment">
 
     <android.support.v7.widget.CardView
-        android:id="@+id/avatar_cardView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1">
+        android:id="@+id/cv_avatar"
+        android:layout_width="0dp"
+        android:layout_height="230dp"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toTopOf="@+id/tl_avatar_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/iv_avatarView"
@@ -21,101 +27,123 @@
 
     </android.support.v7.widget.CardView>
 
-    <android.support.design.widget.TextInputEditText
-        android:layout_width="wrap_content"
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/tl_avatar_name"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Name your Avatar" />
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_avatar">
 
-    <LinearLayout
-        android:id="@+id/layout_2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:baselineAligned="false"
-        android:orientation="horizontal">
-
-        <ScrollView
+        <EditText
+            android:id="@+id/et_avatar_name"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="10">
+            android:hint="@string/avatar_name_field"
+            android:lines="1"
+            android:maxLength="10"
+            android:maxLines="1"
+            android:textAlignment="viewStart" />
+    </android.support.design.widget.TextInputLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <!--TODO:  add images for each Button -->
+    <ScrollView
+        android:id="@+id/sv_feature_selection"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tl_avatar_name">
 
-                <ImageButton
-                    android:id="@+id/bt_HeadFeatureSelection"
-                    style="@android:style/Widget.Material.Button.Small"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center" />
-
-                <ImageButton
-                    android:id="@+id/bt_SkinColorFeatureSelection"
-                    style="@android:style/Widget.Material.Button.Small"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center" />
-
-                <ImageButton
-                    android:id="@+id/bt_EyesFeatureSelection"
-                    style="@android:style/Widget.Material.Button.Small"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center" />
-
-                <ImageButton
-                    android:id="@+id/bt_EyeColorFeatureSelection"
-                    style="@android:style/Widget.Material.Button.Small"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center" />
-
-                <ImageButton
-                    android:id="@+id/bt_HairFeatureSelection"
-                    style="@android:style/Widget.Material.Button.Small"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center" />
-
-                <ImageButton
-                    android:id="@+id/bt_HairColorFeatureSelection"
-                    style="@android:style/Widget.Material.Button.Small"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center" />
-
-                <ImageButton
-                    android:id="@+id/bt_NoseFeatureSelection"
-                    style="@android:style/Widget.Material.Button.Small"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center" />
-
-                <ImageButton
-                    android:id="@+id/bt_MouthFeatureSelection"
-                    style="@android:style/Widget.Material.Button.Small"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center" />
-            </LinearLayout>
-        </ScrollView>
-
-        <GridView
-            android:id="@+id/gv_avatarFeatures"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:columnWidth="80dp"
-            android:gravity="center"
-            android:horizontalSpacing="1dp"
-            android:numColumns="auto_fit"
-            android:stretchMode="columnWidth"
-            android:verticalSpacing="1dp" />
-    </LinearLayout>
+            android:layout_margin="4dp"
+            android:orientation="vertical">
+            <!--TODO:  add images for each Button -->
+
+            <ImageButton
+                android:id="@+id/bt_HeadFeatureSelection"
+                style="@android:style/Widget.Material.Button.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <ImageButton
+                android:id="@+id/bt_SkinColorFeatureSelection"
+                style="@android:style/Widget.Material.Button.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <ImageButton
+                android:id="@+id/bt_EyesFeatureSelection"
+                style="@android:style/Widget.Material.Button.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <ImageButton
+                android:id="@+id/bt_EyeColorFeatureSelection"
+                style="@android:style/Widget.Material.Button.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <ImageButton
+                android:id="@+id/bt_HairFeatureSelection"
+                style="@android:style/Widget.Material.Button.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <ImageButton
+                android:id="@+id/bt_HairColorFeatureSelection"
+                style="@android:style/Widget.Material.Button.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <ImageButton
+                android:id="@+id/bt_NoseFeatureSelection"
+                style="@android:style/Widget.Material.Button.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <ImageButton
+                android:id="@+id/bt_MouthFeatureSelection"
+                style="@android:style/Widget.Material.Button.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+        </LinearLayout>
+    </ScrollView>
+
+    <GridView
+        android:id="@+id/gv_avatarFeatures"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:columnWidth="80dp"
+        android:gravity="center"
+        android:horizontalSpacing="1dp"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/bt_confirmAvatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/sv_feature_selection"
+        app:layout_constraintTop_toBottomOf="@+id/tl_avatar_name" />
 
     <Button
         android:id="@+id/bt_confirmAvatar"
@@ -124,6 +152,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="4dp"
-        android:text="@string/confirm_avatar" />
+        android:text="@string/confirm_avatar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gv_avatarFeatures" />
 
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>
