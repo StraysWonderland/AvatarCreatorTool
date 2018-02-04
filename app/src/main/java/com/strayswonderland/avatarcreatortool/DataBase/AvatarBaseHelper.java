@@ -19,10 +19,13 @@ public class AvatarBaseHelper extends SQLiteOpenHelper {
                 AvatarDbSchema.AvatarTable.Cols.UUID + ", " +
                 AvatarDbSchema.AvatarTable.Cols.TITLE + "," +
                 AvatarDbSchema.AvatarTable.Cols.HEAD + ", " +
+                AvatarDbSchema.AvatarTable.Cols.SKINCOLOUR + ", " +
                 AvatarDbSchema.AvatarTable.Cols.EYES + ", " +
-                AvatarDbSchema.AvatarTable.Cols.MOUTH + ", " +
+                AvatarDbSchema.AvatarTable.Cols.EYECOLOUR + ", " +
+                AvatarDbSchema.AvatarTable.Cols.HAIR + ", " +
+                AvatarDbSchema.AvatarTable.Cols.HAIRCOLOUR + "," +
                 AvatarDbSchema.AvatarTable.Cols.NOSE + ", " +
-                AvatarDbSchema.AvatarTable.Cols.HAIR + ")"
+                AvatarDbSchema.AvatarTable.Cols.MOUTH + ") "
         );
     }
 
