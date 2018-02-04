@@ -85,26 +85,27 @@ public class AvatarHandler {
         }
     }
 
-    public List<Avatar> getDummyAvatars(){
+    public List<Avatar> getDummyAvatars() {
         List<Avatar> dummyList = new ArrayList<>();
+
         Avatar avatar = new Avatar();
-        avatar.setTitle("Pisse01");
+        avatar.setTitle(avatar.getId().toString());
         dummyList.add(avatar);
 
         avatar = new Avatar();
-        avatar.setTitle("Pisse02");
+        avatar.setTitle(avatar.getId().toString());
         dummyList.add(avatar);
 
         avatar = new Avatar();
-        avatar.setTitle("Pisse03");
+        avatar.setTitle(avatar.getId().toString());
         dummyList.add(avatar);
 
         avatar = new Avatar();
-        avatar.setTitle("Pisse04");
+        avatar.setTitle(avatar.getId().toString());
         dummyList.add(avatar);
 
         avatar = new Avatar();
-        avatar.setTitle("Pisse05");
+        avatar.setTitle(avatar.getId().toString());
         dummyList.add(avatar);
 
         return dummyList;
