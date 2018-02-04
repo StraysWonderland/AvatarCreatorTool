@@ -12,7 +12,4 @@ data class Avatar @JvmOverloads constructor(
         var hair: String? = null,
         var hairColor: String? = null,
         var nose: String? = null,
-        var mouth: String? = null) {
-
-    //endregion
-}//region Constructor
+        var mouth: String? = null) 
