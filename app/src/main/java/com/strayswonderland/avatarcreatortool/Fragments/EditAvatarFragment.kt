@@ -6,27 +6,28 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageButton
-import android.widget.ImageSwitcher
+import android.widget.*
+import com.strayswonderland.avatarcreatortool.Adapters.ImageAdapter
 
 import com.strayswonderland.avatarcreatortool.R
 
 class EditAvatarFragment : Fragment() {
-
+    /*
+    *   TODO: find and bind following: Section buttons, Cancel button, Swiping to Randomize??
+    */
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val view = inflater!!.inflate(R.layout.fragment_edit_avatar, container, false)
 
-        /*
-        *   TODO: find and bind following:
-        *   Section buttons
-        *   Cancel button
-        *   Swiping to Randomize??
-         */
+        val featuresGridview = view.findViewById(R.id.gv_avatarFeatures) as GridView
+        featuresGridview.adapter = ImageAdapter(activity)
+
+        featuresGridview.setOnItemClickListener({ parent, v, position, id ->
+            updateAvatarFeatures(position)
+        })
 
         val confirmButton = view.findViewById(R.id.bt_confirmAvatar) as Button
-        confirmButton.setOnClickListener{
+        confirmButton.setOnClickListener {
             // TODO; save Avatar with current features in Database
             // destroy current Fragment
         }
@@ -41,6 +42,10 @@ class EditAvatarFragment : Fragment() {
         val noseSectionButton = view.findViewById(R.id.bt_NoseFeatureSelection) as ImageButton
 
         return view
+    }
+
+    private fun updateAvatarFeatures(position: Int) {
+        // TODO: save selected feature & change displayed image
     }
 
 }
