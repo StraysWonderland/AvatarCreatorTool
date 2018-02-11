@@ -6,9 +6,10 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.*
+import android.widget.Button
+import android.widget.GridView
+import android.widget.ImageButton
 import com.strayswonderland.avatarcreatortool.Adapters.ImageAdapter
-
 import com.strayswonderland.avatarcreatortool.R
 
 class EditAvatarFragment : Fragment() {
@@ -32,14 +33,40 @@ class EditAvatarFragment : Fragment() {
             // destroy current Fragment
         }
 
+
+        //TODO change displayed image resources
         val headSectionButton = view.findViewById(R.id.bt_HeadFeatureSelection) as ImageButton
+        headSectionButton.setOnClickListener {
+
+        }
         val skinColorSectionButton = view.findViewById(R.id.bt_SkinColorFeatureSelection) as ImageButton
+        skinColorSectionButton.setOnClickListener {
+
+        }
         val eyesSectionButton = view.findViewById(R.id.bt_EyesFeatureSelection) as ImageButton
+        eyesSectionButton.setOnClickListener {
+
+        }
         val eyeColorSectionButton = view.findViewById(R.id.bt_EyeColorFeatureSelection) as ImageButton
+        eyeColorSectionButton.setOnClickListener {
+
+        }
         val mouthSectionButton = view.findViewById(R.id.bt_MouthFeatureSelection) as ImageButton
+        mouthSectionButton.setOnClickListener({
+
+        })
         val hairSectionButton = view.findViewById(R.id.bt_HairFeatureSelection) as ImageButton
+        hairSectionButton.setOnClickListener {
+
+        }
         val hairColorSectionButton = view.findViewById(R.id.bt_HairColorFeatureSelection) as ImageButton
+        hairColorSectionButton.setOnClickListener {
+
+        }
         val noseSectionButton = view.findViewById(R.id.bt_NoseFeatureSelection) as ImageButton
+        noseSectionButton.setOnClickListener {
+
+        }
 
         return view
     }
