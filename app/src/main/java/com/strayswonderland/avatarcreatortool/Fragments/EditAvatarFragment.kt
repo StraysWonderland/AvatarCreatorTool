@@ -33,7 +33,7 @@ class EditAvatarFragment : Fragment() {
             // destroy current Fragment
         }
 
-
+        //region Button OnClick Methods
         //TODO change displayed image resources
         val headSectionButton = view.findViewById(R.id.bt_HeadFeatureSelection) as ImageButton
         headSectionButton.setOnClickListener {
@@ -67,6 +67,7 @@ class EditAvatarFragment : Fragment() {
         noseSectionButton.setOnClickListener {
 
         }
+        //endregion
 
         return view
     }
