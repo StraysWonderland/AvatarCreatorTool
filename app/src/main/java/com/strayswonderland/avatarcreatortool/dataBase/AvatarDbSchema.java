@@ -1,4 +1,4 @@
-package com.strayswonderland.avatarcreatortool.DataBase;
+package com.strayswonderland.avatarcreatortool.dataBase;
 
 public class AvatarDbSchema {
     public static final class AvatarTable {

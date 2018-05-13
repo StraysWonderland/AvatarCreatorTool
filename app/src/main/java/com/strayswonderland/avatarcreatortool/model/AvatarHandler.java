@@ -1,4 +1,4 @@
-package com.strayswonderland.avatarcreatortool.Model;
+package com.strayswonderland.avatarcreatortool.model;
 
 
 import android.content.ContentValues;
@@ -6,9 +6,9 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.strayswonderland.avatarcreatortool.DataBase.AvatarBaseHelper;
-import com.strayswonderland.avatarcreatortool.DataBase.AvatarCursorWrapper;
-import com.strayswonderland.avatarcreatortool.DataBase.AvatarDbSchema;
+import com.strayswonderland.avatarcreatortool.dataBase.AvatarBaseHelper;
+import com.strayswonderland.avatarcreatortool.dataBase.AvatarCursorWrapper;
+import com.strayswonderland.avatarcreatortool.dataBase.AvatarDbSchema;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -55,17 +55,14 @@ public class AvatarHandler {
     }
 
     public Avatar getAvatar(String title) {
-        AvatarCursorWrapper cursor = queryAvatar(
+        try (AvatarCursorWrapper cursor = queryAvatar(
                 AvatarDbSchema.AvatarTable.Cols.TITLE + " = ?",
-                new String[]{title});
-        try {
+                new String[]{title})) {
             if (cursor.getCount() == 0) {
                 return null;
             }
             cursor.moveToFirst();
             return cursor.getAvatar();
-        } finally {
-            cursor.close();
         }
     }
 

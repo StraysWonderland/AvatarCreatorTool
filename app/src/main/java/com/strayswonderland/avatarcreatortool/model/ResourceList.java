@@ -1,4 +1,4 @@
-package com.strayswonderland.avatarcreatortool.Model;
+package com.strayswonderland.avatarcreatortool.model;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -144,7 +144,6 @@ public class ResourceList {
         layers[2] = _context.getResources().getDrawable(mouthImage, null);
         layers[3] = _context.getResources().getDrawable(hairImage, null);
 
-        LayerDrawable layerDrawable = new LayerDrawable(layers);
-        return layerDrawable;
+        return new LayerDrawable(layers);
     }
 }

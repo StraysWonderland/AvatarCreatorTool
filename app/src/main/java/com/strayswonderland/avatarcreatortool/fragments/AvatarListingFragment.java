@@ -1,4 +1,4 @@
-package com.strayswonderland.avatarcreatortool.Fragments;
+package com.strayswonderland.avatarcreatortool.fragments;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -11,8 +11,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.strayswonderland.avatarcreatortool.Model.Avatar;
-import com.strayswonderland.avatarcreatortool.Model.AvatarHandler;
+import com.strayswonderland.avatarcreatortool.model.Avatar;
+import com.strayswonderland.avatarcreatortool.model.AvatarHandler;
 import com.strayswonderland.avatarcreatortool.R;
 
 import java.util.List;

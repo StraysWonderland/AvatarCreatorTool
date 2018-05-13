@@ -1,4 +1,4 @@
-package com.strayswonderland.avatarcreatortool.Fragments
+package com.strayswonderland.avatarcreatortool.fragments
 
 
 import android.os.Bundle
@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.GridView
 import android.widget.ImageButton
-import com.strayswonderland.avatarcreatortool.Adapters.ImageAdapter
+import com.strayswonderland.avatarcreatortool.adapters.ImageAdapter
 import com.strayswonderland.avatarcreatortool.R
 
 class EditAvatarFragment : Fragment() {

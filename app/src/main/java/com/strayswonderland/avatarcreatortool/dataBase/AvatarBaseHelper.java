@@ -1,4 +1,4 @@
-package com.strayswonderland.avatarcreatortool.DataBase;
+package com.strayswonderland.avatarcreatortool.dataBase;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

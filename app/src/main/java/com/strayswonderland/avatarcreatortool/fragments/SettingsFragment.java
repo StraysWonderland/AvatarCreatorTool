@@ -1,4 +1,4 @@
-package com.strayswonderland.avatarcreatortool.Fragments;
+package com.strayswonderland.avatarcreatortool.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

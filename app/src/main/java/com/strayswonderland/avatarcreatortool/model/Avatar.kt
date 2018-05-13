@@ -1,4 +1,4 @@
-package com.strayswonderland.avatarcreatortool.Model
+package com.strayswonderland.avatarcreatortool.model
 
 import java.util.UUID
 

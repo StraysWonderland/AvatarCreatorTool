@@ -1,4 +1,4 @@
-package com.strayswonderland.avatarcreatortool.Adapters;
+package com.strayswonderland.avatarcreatortool.adapters;
 
 import android.content.Context;
 import android.view.View;

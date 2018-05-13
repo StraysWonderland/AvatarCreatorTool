@@ -1,10 +1,10 @@
-package com.strayswonderland.avatarcreatortool.DataBase;
+package com.strayswonderland.avatarcreatortool.dataBase;
 
 import android.database.Cursor;
 import android.database.CursorWrapper;
 
-import com.strayswonderland.avatarcreatortool.DataBase.AvatarDbSchema.AvatarTable;
-import com.strayswonderland.avatarcreatortool.Model.Avatar;
+import com.strayswonderland.avatarcreatortool.dataBase.AvatarDbSchema.AvatarTable;
+import com.strayswonderland.avatarcreatortool.model.Avatar;
 
 import java.util.UUID;
 
