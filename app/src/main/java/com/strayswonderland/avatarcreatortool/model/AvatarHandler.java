@@ -67,18 +67,15 @@ public class AvatarHandler {
     }
 
     public Avatar getAvatar(UUID id) {
-        AvatarCursorWrapper cursor = queryAvatar(
+        try (AvatarCursorWrapper cursor = queryAvatar(
                 AvatarDbSchema.AvatarTable.Cols.UUID + " = ?",
                 new String[]{id.toString()}
-        );
-        try {
+        )) {
             if (cursor.getCount() == 0) {
                 return null;
             }
             cursor.moveToFirst();
             return cursor.getAvatar();
-        } finally {
-            cursor.close();
         }
     }
 
@@ -110,15 +107,12 @@ public class AvatarHandler {
 
     public List<Avatar> getAvatars() {
         List<Avatar> avatars = new ArrayList<>();
-        AvatarCursorWrapper cursor = queryAvatar(null, null);
-        try {
+        try (AvatarCursorWrapper cursor = queryAvatar(null, null)) {
             cursor.moveToFirst();
             while (!cursor.isAfterLast()) {
                 avatars.add(cursor.getAvatar());
                 cursor.moveToNext();
             }
-        } finally {
-            cursor.close();
         }
         return avatars;
     }

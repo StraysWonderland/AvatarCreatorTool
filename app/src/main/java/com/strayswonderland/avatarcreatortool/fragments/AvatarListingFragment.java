@@ -37,7 +37,7 @@ public class AvatarListingFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_avatar_listing, container, false);
 
         FloatingActionButton addNewAvatarButton =
-                (FloatingActionButton) view.findViewById(R.id.fab_addNewAvatar);
+                view.findViewById(R.id.fab_addNewAvatar);
 
         addNewAvatarButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,7 +49,7 @@ public class AvatarListingFragment extends Fragment {
             }
         });
 
-        mRecyclerView = (RecyclerView) view.findViewById(R.id.lv_avatars);
+        mRecyclerView = view.findViewById(R.id.lv_avatars);
 
         // use a linear layout manager
         mLayoutManager = new GridLayoutManager(getActivity().getApplicationContext(), 2);
@@ -73,7 +73,7 @@ public class AvatarListingFragment extends Fragment {
             super(inflater.inflate(R.layout.avatar_list_item, parent, false));
             itemView.setOnClickListener(this);
 
-            mTitleTextView = (TextView) itemView.findViewById(R.id.tv_avatar_item_title);
+            mTitleTextView = itemView.findViewById(R.id.tv_avatar_item_title);
         }
 
         public void bind(Avatar avatar) {

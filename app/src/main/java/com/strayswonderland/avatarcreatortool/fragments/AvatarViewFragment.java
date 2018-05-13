@@ -25,7 +25,7 @@ public class AvatarViewFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_avatar_view, container, false);
 
-        avatarPreview = (ImageView) view.findViewById(R.id.iv_avatarView);
+        avatarPreview = view.findViewById(R.id.iv_avatarView);
 
         // Inflate the layout for this fragment
         return view;
