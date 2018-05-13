@@ -5,9 +5,7 @@ class FeatureLists {
         set(value) {
             field = (when (value) {
                 in Modes.modes -> value
-                else -> {
-                    null
-                }
+                else -> null
             }).toString()
         }
     private var currentSkinColour: String = "light"
@@ -61,4 +59,32 @@ class FeatureLists {
     private val mouthFeaturesList: Array<Int> = arrayOf(
 
     )
+
+    fun getCurrentImageIdentifier(_pos: Int): Int? {
+        // TODO: adjust the filter function to filter for names containing the colour
+        return when (currentMode) {
+            "head" -> when (currentSkinColour) {
+                "light" -> headFeaturesList.filter { it == it }[_pos]
+                "dark" -> headFeaturesList.filter { it == it }[_pos]
+                else -> null
+            }
+            "hair" -> when (currentHairColour) {
+                "black" -> hairFeaturesList.filter { it == it }[_pos]
+                "brown" -> hairFeaturesList.filter { it == it }[_pos]
+                "blond" -> hairFeaturesList.filter { it == it }[_pos]
+                "gray" -> hairFeaturesList.filter { it == it }[_pos]
+                else -> null
+            }
+            "eyes" -> when (currentEyeColour) {
+                "black" -> eyesFeaturesList.filter { it == it }[_pos]
+                "brown" -> eyesFeaturesList.filter { it == it }[_pos]
+                "blue" -> eyesFeaturesList.filter { it == it }[_pos]
+                "green" -> eyesFeaturesList.filter { it == it }[_pos]
+                else -> null
+            }
+            "nose" -> noseFeaturesList[_pos]
+            "mouth" -> mouthFeaturesList[_pos]
+            else -> null
+        }
+    }
 }
