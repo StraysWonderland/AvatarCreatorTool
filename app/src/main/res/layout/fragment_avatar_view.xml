@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.strayswonderland.avatarcreatortool.Fragments.AvatarViewFragment">
+    tools:context="com.strayswonderland.avatarcreatortool.fragments.AvatarViewFragment">
 
     <ImageView
         android:id="@+id/iv_avatarView"

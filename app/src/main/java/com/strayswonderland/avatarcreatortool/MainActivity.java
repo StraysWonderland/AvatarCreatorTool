@@ -8,9 +8,9 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
-import com.strayswonderland.avatarcreatortool.Fragments.AvatarListingFragment;
-import com.strayswonderland.avatarcreatortool.Fragments.AvatarViewFragment;
-import com.strayswonderland.avatarcreatortool.Fragments.SettingsFragment;
+import com.strayswonderland.avatarcreatortool.fragments.AvatarListingFragment;
+import com.strayswonderland.avatarcreatortool.fragments.AvatarViewFragment;
+import com.strayswonderland.avatarcreatortool.fragments.SettingsFragment;
 
 public class MainActivity extends AppCompatActivity {
 

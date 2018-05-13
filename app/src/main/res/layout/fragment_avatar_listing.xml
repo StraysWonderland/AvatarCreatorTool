@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.strayswonderland.avatarcreatortool.Fragments.AvatarListingFragment">
+    tools:context="com.strayswonderland.avatarcreatortool.fragments.AvatarListingFragment">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/lv_avatars"
