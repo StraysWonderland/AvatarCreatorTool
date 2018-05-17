@@ -49,5 +49,5 @@ public class ImageAdapter extends BaseAdapter {
         notifyDataSetChanged();
     }
 
-    public Integer[] mImageList;
+    public Integer[] mImageList = {};
 }
