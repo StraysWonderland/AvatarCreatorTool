@@ -19,6 +19,9 @@ public class AvatarHandler {
     private Context mContext;
     private SQLiteDatabase mDatabase;
 
+    /*
+    * provides a singleton of AvatarHandler
+    */
     public static AvatarHandler Instance(Context context) {
         if (sAvatarLab == null) {
             sAvatarLab = new AvatarHandler(context);
@@ -26,6 +29,9 @@ public class AvatarHandler {
         return sAvatarLab;
     }
 
+    /* 
+    * Constructor that initializes the database
+    */
     private AvatarHandler(Context context) {
         mContext = context.getApplicationContext();
         mDatabase = new AvatarBaseHelper(mContext).getWritableDatabase();
@@ -40,11 +46,17 @@ public class AvatarHandler {
         }
     }
 
+    /*
+    * Adds an Avatr to the database
+    */
     private void addAvatar(Avatar a) {
         ContentValues values = getContentValues(a);
         mDatabase.insert(AvatarDbSchema.AvatarTable.NAME, null, values);
     }
 
+    /*
+    * Updates an Avater in the Database
+    */
     private void updateAvatar(Avatar avatar) {
         String uuidString = avatar.getId().toString();
         ContentValues values = getContentValues(avatar);
@@ -54,6 +66,9 @@ public class AvatarHandler {
                 new String[]{uuidString});
     }
 
+    /*
+    * Retrieves an Avatar from the database speicified by the title
+    */
     public Avatar getAvatar(String title) {
         try (AvatarCursorWrapper cursor = queryAvatar(
                 AvatarDbSchema.AvatarTable.Cols.TITLE + " = ?",
@@ -66,6 +81,9 @@ public class AvatarHandler {
         }
     }
 
+    /*
+    * Retrieves an Avatr from the database specified by the UUID
+    */
     public Avatar getAvatar(UUID id) {
         try (AvatarCursorWrapper cursor = queryAvatar(
                 AvatarDbSchema.AvatarTable.Cols.UUID + " = ?",
@@ -79,6 +97,9 @@ public class AvatarHandler {
         }
     }
 
+    /*
+    * Constructs and returns a dummy avatar 
+    */ 
     public List<Avatar> getDummyAvatars() {
         List<Avatar> dummyList = new ArrayList<>();
 
@@ -105,6 +126,9 @@ public class AvatarHandler {
         return dummyList;
     }
 
+    /*
+    * Retrieves all Avatars
+    */
     public List<Avatar> getAvatars() {
         List<Avatar> avatars = new ArrayList<>();
         try (AvatarCursorWrapper cursor = queryAvatar(null, null)) {
